@@ -1,6 +1,6 @@
 # To Do List - Lista de Tarefas
 
-Essa aplicação foi desenvolvida para completar o teste técnico proposto para a vaga de desenvolvedor. Você pode visualizar a aplicação funcionando [aqui](https://todolist-yourbanks.vercel.app/). Você também pode visualizar o estado das builds e deploys de cada commit visualizando o histórico de commits [aqui](https://github.com/xophantom/todolist-yourbanks/commits/main).
+Essa aplicação foi desenvolvida para completar o teste técnico proposto para a vaga de desenvolvedor. Você pode visualizar a aplicação funcionando [aqui](https://todolist-yoursbank.vercel.app/). Você também pode visualizar o estado das builds e deploys de cada commit visualizando o histórico de commits [aqui](https://github.com/xophantom/todolist-yourbanks/commits/main).
 
 ## Tecnologias
 
