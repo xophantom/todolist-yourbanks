@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# To Do List - Lista de Tarefas
 
-## Getting Started
+Essa aplicação foi desenvolvida para completar o teste técnico proposto para a vaga de desenvolvedor. Você pode visualizar a aplicação funcionando em [todolist-yourbanks.vercel.app](todolist-yourbanks.vercel.app). Você também pode visualizar o estado das builds e deploys de cada commit visualizando o histórico de commits [aqui](https://github.com/xophantom/todolist-yourbanks/commits/main).
 
-First, run the development server:
+## Tecnologias
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Esse projeto foi desenvolvido utilizando algumas das mais recentes tecnologias como Next.js e React, TypeScript para adicionar tipagem estática ao JavaScript, Material-UI para garantir uma interface bonita e responsiva, Yup para validação de dados.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O projeto possui uma série de filtros para garantir a qualidade do código criado, como [linters](https://eslint.org/) e [testes unitários](https://jestjs.io/en/). A cobertura de testes unitários está com 95%, para os testes E2E utilizei o [Playwright](https://playwright.dev/) para realizar testes end-to-end e garantir que todos os componentes e funcionalidades estejam funcionando corretamente.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts disponíveis
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### npm i
 
-## Learn More
+Instala as dependências do projeto.
 
-To learn more about Next.js, take a look at the following resources:
+### npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Inicia o projeto na sua máquina local.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### npm run test
 
-## Deploy on Vercel
+Executa todos os testes unitários do projeto.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### npm run e2e:headed
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Executa todos os testes E2E do projeto.
