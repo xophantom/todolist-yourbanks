@@ -1,37 +1,32 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ToDoItem } from "../types/ToDo";
 import { v4 as uuidv4 } from "uuid";
 
 export const useToDoList = () => {
-  const [toDoItems, setToDoItems] = useState<ToDoItem[]>([
-    {
-      checked: true,
-      id: uuidv4(),
-      title: "Wash dishes",
-    },
-    {
-      checked: false,
-      id: uuidv4(),
-      title: "Do the laundry",
-    },
-  ]);
+  const orderItems = (toDoItems: ToDoItem[]) =>
+    toDoItems.sort((a, b) => Number(a.checked) - Number(b.checked));
 
-  useEffect(() => {
-    const orderedToDoItems = [...toDoItems].sort(
-      (a, b) => Number(a.checked) - Number(b.checked)
-    );
-
-    if (JSON.stringify(orderedToDoItems) !== JSON.stringify(toDoItems)) {
-      setToDoItems(orderedToDoItems);
-    }
-  }, [toDoItems, setToDoItems]);
+  const [toDoItems, setToDoItems] = useState<ToDoItem[]>(
+    orderItems([
+      {
+        checked: false,
+        id: uuidv4(),
+        title: "Do the laundry",
+      },
+      {
+        checked: true,
+        id: uuidv4(),
+        title: "Wash dishes",
+      },
+    ])
+  );
 
   const pushToDoItem = (toDoItem: ToDoItem) =>
-    setToDoItems((toDoItems) => [...toDoItems, toDoItem]);
+    setToDoItems((toDoItems) => orderItems([...toDoItems, toDoItem]));
 
   const removeToDoItem = ({ id: selectedId }: Pick<ToDoItem, "id">) =>
     setToDoItems((toDoItems) =>
-      toDoItems.filter((item) => item.id !== selectedId)
+      orderItems([...toDoItems].filter((item) => item.id !== selectedId))
     );
 
   const editToDoItem = (toDoItem: ToDoItem) =>
@@ -48,7 +43,7 @@ export const useToDoList = () => {
 
       nextToDoItems.splice(selectedItemIndex, 1, toDoItem);
 
-      return nextToDoItems;
+      return orderItems(nextToDoItems);
     });
 
   return { toDoItems, pushToDoItem, removeToDoItem, editToDoItem };
