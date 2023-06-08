@@ -1,9 +1,9 @@
-import { ToDoContext } from "@/app/context/ToDoContext";
-import { ToDoItem as ToDoItemType } from "@/app/types/ToDo";
 import { Box, Checkbox, ListItem, Typography, useTheme } from "@mui/material";
 import React, { useContext } from "react";
 import { IconButton } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { ToDoContext } from "../../context/ToDoContext";
+import { ToDoItem as ToDoItemType } from "../../types/ToDo";
 
 type Props = { item: ToDoItemType };
 
@@ -39,7 +39,11 @@ export const ToDoItem: React.FC<Props> = ({ item }) => {
             {title}
           </Typography>
         </Box>
-        <IconButton onClick={handleRemove} color="secondary">
+        <IconButton
+          onClick={handleRemove}
+          color="secondary"
+          aria-label="Delete"
+        >
           <DeleteIcon />
         </IconButton>
       </Box>

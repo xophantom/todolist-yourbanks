@@ -3,10 +3,10 @@ import { useForm } from "react-hook-form";
 import { TextField, ListItem, Box, IconButton } from "@mui/material";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { ToDoForm as ToDoFormType } from "@/app/types/ToDo";
-import { ToDoContext } from "@/app/context/ToDoContext";
 import { v4 as uuidv4 } from "uuid";
 import AddIcon from "@mui/icons-material/Add";
+import { ToDoContext } from "../../context/ToDoContext";
+import { ToDoForm as ToDoFormType } from "../../types/ToDo";
 
 const schema = yup.object().shape({
   title: yup.string().required("Title is required"),
@@ -49,7 +49,7 @@ export const ToDoForm = () => {
             size="small"
           />
 
-          <IconButton type="submit" color="primary">
+          <IconButton type="submit" color="primary" aria-label="Add">
             <AddIcon />
           </IconButton>
         </Box>

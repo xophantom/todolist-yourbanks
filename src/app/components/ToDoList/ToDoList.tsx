@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { List } from "@mui/material";
 import { ToDoItem } from "../ToDoItem/ToDoItem";
-import { ToDoContext } from "@/app/context/ToDoContext";
 import { ToDoForm } from "../ToDoForm/ToDoForm";
+import { ToDoContext } from "../../context/ToDoContext";
 
 export const ToDoList: React.FC = () => {
   const { toDoItems } = useContext(ToDoContext);
