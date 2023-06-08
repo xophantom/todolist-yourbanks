@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest",
+    "e2e": "concurrently \"npm run dev\" \"delay 10 && playwright test --project=chromium\"",
+    "e2e:headed": "concurrently \"npm run dev\" \"delay 10 && playwright test --project=chromium --headed\""
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -22,9 +25,12 @@
     "@types/react": "18.2.8",
     "@types/react-dom": "18.2.4",
     "@types/uuid": "^9.0.1",
+    "concurrently": "^8.1.0",
+    "delay-cli": "^2.0.0",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
     "next": "13.4.4",
+    "playwright": "^1.34.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.44.3",
@@ -34,10 +40,11 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.18.6",
     "@babel/core": "^7.21.3",
     "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.0",
+    "@playwright/test": "^1.34.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.0",
