@@ -4,7 +4,7 @@ Essa aplicação foi desenvolvida para completar o teste técnico proposto para 
 
 ## Tecnologias
 
-Esse projeto foi desenvolvido utilizando algumas das mais recentes tecnologias como Next.js e React, TypeScript para adicionar tipagem estática ao JavaScript, Material-UI para garantir uma interface bonita e responsiva, Yup para validação de formulários em conjunto com react hooks forms para gerenciamento de formulários.
+Esse projeto foi desenvolvido utilizando algumas das mais recentes tecnologias como Next.js e React, TypeScript para adicionar tipagem estática ao JavaScript, Material-UI para garantir uma interface bonita e responsiva, Yup para validação de formulários em conjunto com React Hook Form para gerenciamento de formulários.
 
 O projeto possui uma série de filtros para garantir a qualidade do código criado, como [linters](https://eslint.org/) e [testes unitários](https://jestjs.io/en/). A cobertura de testes unitários está com 95%, para os testes E2E utilizei o [Playwright](https://playwright.dev/) para realizar testes end-to-end e garantir que todos os componentes e funcionalidades estejam funcionando corretamente.
 
