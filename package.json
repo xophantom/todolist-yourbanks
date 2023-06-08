@@ -11,6 +11,9 @@
     "e2e": "concurrently \"npm run dev\" \"delay 10 && playwright test --project=chromium\"",
     "e2e:headed": "concurrently \"npm run dev\" \"delay 10 && playwright test --project=chromium --headed\""
   },
+  "engines": {
+    "node": ">16.x"
+  },
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
